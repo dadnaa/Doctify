@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  
+    @variants responsive {
+      /* Hide scrollbar for Chrome, Safari, and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      
+      
+      /* Hide scrollbar for IE, Edge, and Firefox */
+      .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+      /* Firefox */
+      .scrollBar::-moz-scrollbar {
+        scrollbar-color: #373C9E #D9D9D9 ; /* Couleur de la poignée et de la piste */
+        width :2vw;
+      }
+
+      /* Chrome, Edge */
+      .scrollBar::-webkit-scrollbar {
+        scrollbar-width: thin; /* Largeur de la barre de défilement */
+        width: 8px; /* Adjust width of scrollbar */
+       
+      
+      }
+      .scrollBar::-webkit-scrollbar-thumb {
+        background-color:#373C9E; /* Couleur de la poignée */
+        height: 1rem;
+        border-radius :2rem ; 
+       background-clip :content-box ;
+      }
+      .scrollBar::-webkit-scrollbar-track {
+        background-color: #D9D9D9; /* Couleur de la piste */
+        width: 6px;
+       
+      }
+
+      
+    }}
